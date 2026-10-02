@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="color_sidebar_selected">#34495E</color>
+
+    <!-- Chatbot theme colors -->
+    <color name="chatbot_bg">#060E1A</color>
+    <color name="chatbot_primary">#00BCD4</color>
+    <color name="chatbot_accent">#1565C0</color>
+    <color name="chatbot_surface">#0D1B2A</color>
+    <color name="chatbot_text_primary">#E8F4F8</color>
+    <color name="chatbot_text_secondary">#8BA7C7</color>
+    <color name="chatbot_text_hint">#4A6A8A</color>
+    <color name="chatbot_bubble_user">#1565C0</color>
+    <color name="chatbot_bubble_bot">#1A3A5C</color>
+    <color name="chatbot_status_listening">#4CAF50</color>
+    <color name="chatbot_status_thinking">#FFC107</color>
+    <color name="chatbot_status_speaking">#9C27B0</color>
+    <color name="chatbot_status_error">#FF5252</color>
+</resources>

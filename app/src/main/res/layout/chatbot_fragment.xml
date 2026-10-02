@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chatbot_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#060E1A"
+    android:padding="20dp"
+    tools:context=".ChatbotFragment">
+
+    <TextView
+        android:id="@+id/tv_robot_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:letterSpacing="0.1"
+        android:text="ROBOT"
+        android:textColor="#00BCD4"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="ROBO" />
+
+    <TextView
+        android:id="@+id/tv_chatbot_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/bg_chatbot_status"
+        android:gravity="center"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="7dp"
+        android:text="Đang khởi tạo..."
+        android:textColor="#8BA7C7"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_robot_name" />
+
+    <!-- Khuôn mặt co giãn theo màn hình và chiếm toàn bộ vùng nội dung còn lại. -->
+    <FrameLayout
+        android:id="@+id/face_container"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toTopOf="@id/tv_stt_realtime"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_chatbot_status">
+
+        <View
+            android:id="@+id/face_glow_ring"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/bg_chatbot_face" />
+
+        <ImageView
+            android:id="@+id/iv_chatbot_face"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:contentDescription="Biểu cảm chatbot"
+            android:padding="16dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/chatbot_face_idle" />
+    </FrameLayout>
+
+    <!-- Duy nhất một vùng chữ: câu người dùng đang nói hoặc câu chatbot đang đọc. -->
+    <TextView
+        android:id="@+id/tv_stt_realtime"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chatbot_status"
+        android:ellipsize="end"
+        android:fontFamily="sans-serif"
+        android:gravity="center"
+        android:maxLines="2"
+        android:minHeight="64dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="14dp"
+        android:textColor="#E6F7FF"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Mình đang lắng nghe..." />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

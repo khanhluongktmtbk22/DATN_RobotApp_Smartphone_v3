@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Camera preview -->
+    <androidx.camera.view.PreviewView
+        android:id="@+id/viewFinder"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <!-- Custom overlay vẽ bounding box trực tiếp lên canvas -->
+    <com.example.datn_v1.BoundingBoxOverlay
+        android:id="@+id/bboxOverlay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+
+    <!-- Score / label hiển thị góc trên trái -->
+    <TextView
+        android:id="@+id/tvScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|start"
+        android:layout_margin="16dp"
+        android:padding="12dp"
+        android:background="#80000000"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:text="Score: 0.00"
+        android:fontFamily="monospace" />
+
+    <!-- Hàng nút điều khiển AI — góc dưới giữa -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="24dp"
+        android:orientation="horizontal"
+        android:background="#A0000000"
+        android:padding="12dp"
+        android:gravity="center_vertical">
+
+        <!-- Switch 1: Bám Theo Người (Auto-Follow YOLO) -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchAutoFollow"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:text="Bám Theo Người"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+        <!-- Divider -->
+        <View
+            android:layout_width="1dp"
+            android:layout_height="32dp"
+            android:background="#60FFFFFF"
+            android:layout_marginEnd="24dp" />
+
+        <!-- Switch 2: Phát Hiện Té Ngã (YOLO + LSTM) -->
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switchFallDetection"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Phát Hiện Té Ngã"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</FrameLayout>

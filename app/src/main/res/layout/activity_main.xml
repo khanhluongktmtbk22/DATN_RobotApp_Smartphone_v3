@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#060E1A"
+    android:fitsSystemWindows="true"
+    tools:context=".MainActivity">
+
+    <!-- Nội dung chính luôn chiếm trọn màn hình; vuốt từ mép trái để mở menu. -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/sidebar"
+        android:layout_width="128dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="#1A2634"
+        android:elevation="16dp"
+        android:fitsSystemWindows="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:contentDescription="Robot App"
+                android:padding="2dp"
+                android:src="@drawable/ohmni_robot" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:alpha="0.8"
+                android:text="Robot App"
+                android:textColor="#FFFFFF"
+                android:textSize="11sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="72dp"
+            android:layout_height="1dp"
+            android:layout_marginBottom="12dp"
+            android:background="#4F5F6F" />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/btnNavProfile"
+                    style="@style/SidebarItemStyleCompact">
+                    <ImageView style="@style/SidebarIconStyleSmall" android:src="@drawable/ic_person_24" />
+                    <TextView style="@style/SidebarTextStyleSmall" android:text="Tài khoản" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnNavTracking"
+                    style="@style/SidebarItemStyleCompact"
+                    android:layout_marginTop="8dp">
+                    <ImageView style="@style/SidebarIconStyleSmall" android:src="@drawable/ic_visibility_24" />
+                    <TextView style="@style/SidebarTextStyleSmall" android:text="Tracking" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnNavChatbot"
+                    style="@style/SidebarItemStyleCompact"
+                    android:layout_marginTop="8dp">
+                    <ImageView style="@style/SidebarIconStyleSmall" android:src="@drawable/ic_chat_24" />
+                    <TextView style="@style/SidebarTextStyleSmall" android:text="Chatbot" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/btnNavVideo"
+                    style="@style/SidebarItemStyleCompact"
+                    android:layout_marginTop="8dp">
+                    <ImageView style="@style/SidebarIconStyleSmall" android:src="@drawable/ic_video_call_24" />
+                    <TextView style="@style/SidebarTextStyleSmall" android:text="Gọi Video" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Khuôn mặt LISTENING: mắt mở to, chú ý lắng nghe -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Nền hình tròn -->
+    <path
+        android:pathData="M100,100 m-90,0 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0"
+        android:fillColor="#1A2634" />
+
+    <!-- Viền ngoài (màu xanh lá - đang active) -->
+    <path
+        android:pathData="M100,100 m-90,0 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0"
+        android:fillColor="#00000000"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="4" />
+
+    <!-- Mắt trái (tròn to) -->
+    <path
+        android:pathData="M75,82 m-13,0 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0"
+        android:fillColor="#00BCD4" />
+    <!-- Đồng tử trái -->
+    <path
+        android:pathData="M75,82 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0"
+        android:fillColor="#1A2634" />
+    <!-- Ánh sáng mắt trái -->
+    <path
+        android:pathData="M70,77 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Mắt phải (tròn to) -->
+    <path
+        android:pathData="M125,82 m-13,0 a13,13 0 1,0 26,0 a13,13 0 1,0 -26,0"
+        android:fillColor="#00BCD4" />
+    <!-- Đồng tử phải -->
+    <path
+        android:pathData="M125,82 m-6,0 a6,6 0 1,0 12,0 a6,6 0 1,0 -12,0"
+        android:fillColor="#1A2634" />
+    <!-- Ánh sáng mắt phải -->
+    <path
+        android:pathData="M120,77 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0"
+        android:fillColor="#FFFFFF" />
+
+    <!-- Miệng hé mở (đang lắng nghe) -->
+    <path
+        android:pathData="M80,120 Q100,130 120,120"
+        android:fillColor="#00000000"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+    <!-- Sóng âm thanh bên trái tai -->
+    <path
+        android:pathData="M20,90 Q15,100 20,110"
+        android:fillColor="#00000000"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillAlpha="0.7" />
+    <path
+        android:pathData="M10,80 Q3,100 10,120"
+        android:fillColor="#00000000"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillAlpha="0.4" />
+
+    <!-- Sóng âm thanh bên phải tai -->
+    <path
+        android:pathData="M180,90 Q185,100 180,110"
+        android:fillColor="#00000000"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillAlpha="0.7" />
+    <path
+        android:pathData="M190,80 Q197,100 190,120"
+        android:fillColor="#00000000"
+        android:strokeColor="#4CAF50"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillAlpha="0.4" />
+
+</vector>

@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Khuôn mặt SPEAKING: miệng mở, mắt vui vẻ -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Nền hình tròn -->
+    <path
+        android:pathData="M100,100 m-90,0 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0"
+        android:fillColor="#1A2634" />
+
+    <!-- Viền ngoài (màu tím - đang nói) -->
+    <path
+        android:pathData="M100,100 m-90,0 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0"
+        android:fillColor="#00000000"
+        android:strokeColor="#9C27B0"
+        android:strokeWidth="4" />
+
+    <!-- Mắt trái (cong lên - vui) -->
+    <path
+        android:pathData="M62,78 Q75,68 88,78"
+        android:fillColor="#00000000"
+        android:strokeColor="#00BCD4"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+
+    <!-- Mắt phải (cong lên - vui) -->
+    <path
+        android:pathData="M112,78 Q125,68 138,78"
+        android:fillColor="#00000000"
+        android:strokeColor="#00BCD4"
+        android:strokeWidth="6"
+        android:strokeLineCap="round" />
+
+    <!-- Miệng mở rộng (đang nói) -->
+    <path
+        android:pathData="M65,115 Q100,145 135,115 Q100,110 65,115"
+        android:fillColor="#9C27B0" />
+    <!-- Răng (viền trắng) -->
+    <path
+        android:pathData="M72,115 L128,115"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3" />
+
+    <!-- Má trái -->
+    <path
+        android:pathData="M48,98 m-12,0 a12,7 0 1,0 24,0 a12,7 0 1,0 -24,0"
+        android:fillColor="#FF8A80"
+        android:fillAlpha="0.5" />
+
+    <!-- Má phải -->
+    <path
+        android:pathData="M152,98 m-12,0 a12,7 0 1,0 24,0 a12,7 0 1,0 -24,0"
+        android:fillColor="#FF8A80"
+        android:fillAlpha="0.5" />
+
+    <!-- Sóng âm phát ra (miệng đang nói) -->
+    <path
+        android:pathData="M152,140 Q158,133 152,126"
+        android:fillColor="#00000000"
+        android:strokeColor="#9C27B0"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:fillAlpha="0.8" />
+    <path
+        android:pathData="M161,148 Q170,133 161,118"
+        android:fillColor="#00000000"
+        android:strokeColor="#9C27B0"
+        android:strokeWidth="2.5"
+        android:strokeLineCap="round"
+        android:fillAlpha="0.5" />
+
+</vector>

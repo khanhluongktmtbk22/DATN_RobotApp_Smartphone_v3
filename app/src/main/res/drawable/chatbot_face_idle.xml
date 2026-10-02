@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Khuôn mặt IDLE: mắt nửa nhắm, miệng mỉm cười nhẹ -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="200"
+    android:viewportHeight="200">
+
+    <!-- Nền hình tròn -->
+    <path
+        android:pathData="M100,100 m-90,0 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0"
+        android:fillColor="#1A2634" />
+
+    <!-- Viền ngoài -->
+    <path
+        android:pathData="M100,100 m-90,0 a90,90 0 1,0 180,0 a90,90 0 1,0 -180,0"
+        android:fillColor="#00000000"
+        android:strokeColor="#00BCD4"
+        android:strokeWidth="3" />
+
+    <!-- Mắt trái (nửa nhắm) -->
+    <path
+        android:pathData="M65,80 Q75,75 85,80"
+        android:fillColor="#00000000"
+        android:strokeColor="#00BCD4"
+        android:strokeWidth="5"
+        android:strokeLineCap="round" />
+
+    <!-- Mắt phải (nửa nhắm) -->
+    <path
+        android:pathData="M115,80 Q125,75 135,80"
+        android:fillColor="#00000000"
+        android:strokeColor="#00BCD4"
+        android:strokeWidth="5"
+        android:strokeLineCap="round" />
+
+    <!-- Miệng mỉm cười nhẹ -->
+    <path
+        android:pathData="M70,120 Q100,135 130,120"
+        android:fillColor="#00000000"
+        android:strokeColor="#00BCD4"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+    <!-- Má trái (blusher) -->
+    <path
+        android:pathData="M55,100 m-10,0 a10,6 0 1,0 20,0 a10,6 0 1,0 -20,0"
+        android:fillColor="#FF8A80"
+        android:fillAlpha="0.4" />
+
+    <!-- Má phải -->
+    <path
+        android:pathData="M145,100 m-10,0 a10,6 0 1,0 20,0 a10,6 0 1,0 -20,0"
+        android:fillColor="#FF8A80"
+        android:fillAlpha="0.4" />
+
+</vector>

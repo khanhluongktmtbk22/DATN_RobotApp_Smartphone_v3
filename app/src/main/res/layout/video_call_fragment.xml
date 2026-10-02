@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0A1A">
+
+    <!-- ===== Remote video – Caregiver feed (fullscreen) ===== -->
+    <org.webrtc.SurfaceViewRenderer
+        android:id="@+id/remoteSurfaceView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="invisible" />
+
+
+
+    <!-- ===== Status chip at top-center ===== -->
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="#99000000"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:text="Sẵn sàng kết nối"
+        android:textColor="#FFFFFF"
+        android:textSize="13sp"
+        android:fontFamily="sans-serif-medium" />
+
+    <!-- ===== IDLE STATE: Call Caregiver button ===== -->
+    <LinearLayout
+        android:id="@+id/layoutIdle"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="#0A0A1A"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp">
+
+        <!-- Avatar circle -->
+        <ImageView
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:background="@drawable/vc_bg_circle_avatar"
+            android:padding="24dp"
+            android:src="@drawable/vc_ic_person"
+            android:contentDescription="Caregiver avatar" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Gọi đến Caregiver"
+            android:textColor="#E0E0E0"
+            android:textSize="22sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Kết nối video trực tiếp với người thân"
+            android:textColor="#7E7E9A"
+            android:textSize="14sp" />
+
+        <!-- Call button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCallCaregiver"
+            android:layout_width="200dp"
+            android:layout_height="52dp"
+            android:layout_marginTop="36dp"
+            android:text="Gọi Video"
+            android:textColor="#FFFFFF"
+            android:textSize="15sp"
+            app:backgroundTint="#1565C0"
+            app:cornerRadius="26dp"
+            app:icon="@drawable/vc_ic_videocall"
+            app:iconGravity="textStart"
+            app:iconTint="#FFFFFF"
+            app:iconPadding="8dp" />
+
+    </LinearLayout>
+
+    <!-- ===== CALL CONTROLS (bottom bar – visible during active call) ===== -->
+    <LinearLayout
+        android:id="@+id/layoutCallControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="28dp"
+        android:background="#CC000000"
+        android:visibility="gone">
+
+        <!-- Mic toggle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="28dp">
+            <ImageButton
+                android:id="@+id/btnToggleMic"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/vc_bg_circle_control"
+                android:src="@drawable/vc_ic_mic_on"
+                android:padding="14dp"
+                android:contentDescription="Toggle microphone" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Micro"
+                android:textColor="#CCCCCC"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- End call -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:layout_marginEnd="28dp">
+            <ImageButton
+                android:id="@+id/btnEndCall"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:background="@drawable/vc_bg_circle_end_call"
+                android:src="@drawable/vc_ic_call_end"
+                android:padding="16dp"
+                android:contentDescription="End call" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Kết thúc"
+                android:textColor="#CCCCCC"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+        <!-- Camera toggle -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageButton
+                android:id="@+id/btnToggleCamera"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:background="@drawable/vc_bg_circle_control"
+                android:src="@drawable/vc_ic_cam_on"
+                android:padding="14dp"
+                android:contentDescription="Toggle camera" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="Camera"
+                android:textColor="#CCCCCC"
+                android:textSize="11sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <!--
+        Local PiP card – dat CUOI CUNG trong FrameLayout de luon hien len tren
+        tat ca cac overlay khac. An khi idle, hien khi call active.
+    -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/localVideoCard"
+        android:layout_width="110dp"
+        android:layout_height="148dp"
+        android:layout_gravity="top|end"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="12dp"
+        android:visibility="gone"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="12dp"
+        app:strokeColor="#80FFFFFF"
+        app:strokeWidth="1dp">
+
+        <org.webrtc.SurfaceViewRenderer
+            android:id="@+id/localSurfaceView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

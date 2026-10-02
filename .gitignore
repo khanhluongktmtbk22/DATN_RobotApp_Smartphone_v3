@@ -1,0 +1,27 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+# Local credentials and generated output
+/.idea/
+/.kotlin/
+/.android-adb/
+/app/google-services.json
+/.env
+/.env.*
+*.jks
+*.keystore
+*.log
+/logcat*.txt
+/crash*.txt
