@@ -1,10 +1,18 @@
+import java.util.Properties
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
 }
 
-val groqApiKey = providers.environmentVariable("GROQ_API_KEY").orNull.orEmpty()
+val localProperties = Properties().apply {
+    val localFile = rootProject.file("local.properties")
+    if (localFile.isFile) localFile.inputStream().use { load(it) }
+}
+val groqApiKey = localProperties.getProperty("GROQ_API_KEY")
+    ?.takeIf { it.isNotBlank() }
+    ?: providers.environmentVariable("GROQ_API_KEY").orNull.orEmpty()
 
 android {
     namespace = "com.example.datn_v1"
